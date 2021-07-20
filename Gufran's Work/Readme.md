@@ -1,4 +1,3 @@
-...
 import numpy as np
 import pandas as pd
 
@@ -237,7 +236,7 @@ scores = cross_val_score(linear_svc, X_train, Y_train, cv=10, scoring = "accurac
 print("Scores:\n", pd.Series(scores))
 print("Mean:", scores.mean())
 print("Standard Deviation:", scores.std())
-...
+
 
 
 ![Predictions](https://user-images.githubusercontent.com/58569042/126277795-48e73983-01c1-4b85-8872-933407daa112.PNG)
