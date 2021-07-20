@@ -124,5 +124,6 @@ scores = cross_val_score(linear_svc, X_train, Y_train, cv=10, scoring = "accurac
 print("Scores:\n", pd.Series(scores))
 print("Mean:", scores.mean())
 print("Standard Deviation:", scores.std())
+![Prediction](https://user-images.githubusercontent.com/73543860/126356290-07f52e29-6d16-463f-9670-546cceb4f005.PNG)
 
 
