@@ -1,7 +1,5 @@
 import numpy as np
 import pandas as pd
-
-# Algorithms
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC, LinearSVC
