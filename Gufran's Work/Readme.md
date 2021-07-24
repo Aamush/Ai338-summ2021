@@ -9,14 +9,12 @@ from sklearn.naive_bayes import MultinomialNB
 
 train_df = pd.read_csv('train.csv')
 test_df = pd.read_csv('test.csv')
-# train_df.info()
 
 # Detailed look at missing data
 total = train_df.isnull().sum().sort_values(ascending=False)
 percent_1 = train_df.isnull().sum()/train_df.isnull().count()*100
 percent_2 = (round(percent_1, 1)).sort_values(ascending=False)
 missing_data = pd.concat([total, percent_2], axis=1, keys=['Total', '%'])
-# print (missing_data)
 
 # Data Processing
 
@@ -93,7 +91,6 @@ for dataset in data:
     dataset['Sex'] = dataset['Sex'].map(genders)
 
 # Ticket Converting Features
-# print (train_df['Ticket'].describe())
 train_df = train_df.drop(['Ticket'], axis=1)
 test_df = test_df.drop(['Ticket'], axis=1)
 
@@ -136,14 +133,6 @@ for dataset in data:
 data = [train_df, test_df]
 for dataset in data:
     dataset['Age_Class']= dataset['Age']* dataset['Pclass']
-
-# (Fare per Person) Creating new Features
-"""
-data = [train_df, test_df]
-for dataset in data:
-    dataset['Fare_Per_Person'] = dataset['Fare']/(dataset['relatives']+1)
-"""
-
 
 # Building Machine Learning Models
 X_train = train_df.drop("Survived", axis=1)
